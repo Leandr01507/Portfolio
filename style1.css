@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@500&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@500&family=Poppins&family=Six+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Josefin+Sans:wght@300&family=Montserrat:wght@500&family=Poppins&family=Six+Caps&display=swap');
+
+
+*{
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-size: 20px;
+    color: black;
+    background: white;
+    height: 100vh;
+}
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    background-color: #FFCF1C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transition {
+    background-color: #333;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    opacity: 0 5s ease;
+}
+
+.en {
+    margin-right: -100px;
+}
+
+.fr {
+    margin-right: -100px;
+}
+
+.animation {
+    animation: loading 1s cubic-bezier(.59,.32,.17,.94) forwards;
+}
+
+@keyframes loading {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)); /* Dégradé de blanc à transparent */
+}
+
+
+.header a{
+    font-family: 'Cabin', sans-serif;
+}
+
+.header p{
+    font-family: 'Cabin', sans-serif;
+    margin-left: -100px;
+}
+
+/*.header shadow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 10), rgba(0, 0, 0, 0.2)); /* Dégradé de haut en bas avec opacité 
+    /* Vous pouvez ajuster les couleurs et les valeurs d'opacité selon vos préférences 
+    padding: 10px; /* Ajoutez une marge intérieure si nécessaire 
+}
+*/
+
+
+/* BARRE DE NAVIGATION RESPONSIVE*/
+
+
+/* Styles pour le menu de navigation */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.navbar a {
+    color: black;
+    text-decoration: none;
+    margin-left: 150px;
+    color: #000;
+    text-decoration: none;
+}
+  
+/* Styles pour le menu de navigation lorsqu'il est visible */
+.navbar.show {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+  
+/* Styles pour les liens du menu de navigation lorsqu'ils sont affichés verticalement */
+.navbar.show a {
+    display: block;
+    margin-bottom: 10px;
+}
+ 
+/* Media query pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+    .navbar {
+      display: none; /* Masquez le menu de navigation par défaut sur les écrans plus petits */
+    }
+  }
+
+/* PAGE */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+    text-align: center; /* Centre le texte à l'intérieur du h1 */
+    height: 100vh; /* Ajuste la hauteur pour occuper la hauteur de la fenêtre */
+    justify-content: center; /* Centre le contenu verticalement */
+}
+
+.centered {
+    margin-bottom: 20px; /* Ajoute un espacement entre le h1 et les éléments suivants */
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.centered h1 {
+    font-family: 'Cabin', sans-serif;
+    color: #000;
+    text-align: center; /* Centrer le texte */
+}
+
+.moi{
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+}
+
+.photo-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* optionnel, pour test */
+}
+
+.circle-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    background-color: #FFCF1C; /* or premium léger */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0); /* scale 0 au départ */
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+    z-index: -1; /* derrière la photo */
+}
+
+.moi img {
+    position: relative;
+    z-index: 1; /* au-dessus du cercle */
+    border-radius: 10px; /* optionnel, style premium */
+}
+
+
+
+
+.right-aligned {
+    text-align: right; /* Aligne le texte à droite pour les éléments h3 et p */
+    margin-left: 890px;
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    padding: 0 400px 200px 400px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.text h3{
+    font-family: 'Cabin', sans-serif;
+    font-size: 28px;
+    margin-top: 20px;
+    transition: color 0.3s;
+    position: relative;
+    display: inline-block;
+}
+
+
+.text h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFCF1C;
+    transition: width 0.3s ease-in-out; /* Animation de largeur */
+}
+
+.text h3:hover::after {
+    width: 100%; /* Largeur complète lors du survol */
+}
+
+.text p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+}
+
+.mail{
+    margin-top: 100px;
+    margin-left: 100px;
+    font-family:'Cabin', sans-serif;;
+}
+
+.mail p {
+    font-family: 'Cabin', sans-serif;
+}
+
+.footer {
+    font-size: 12px;
+    color: #000; /* Couleur du texte */
+    text-align: center;
+    padding: 10px 0;
+}
+
+.icon-black {
+    color: black; /* Couleur noire */
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.lien-animation {
+    color: #000; /* Couleur de texte initiale */
+    transition: color 1.5s ease; /* Animation de couleur sur 0.3s */
+  }
+  
+.lien-animation:hover {
+    color: #FFCF1C ; /* Couleur de texte au survol */
+}
+
+.space{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 500px 0 500px;
+}
+
+.large1 {
+    margin: 20px 100px 0 100px;
+    padding: 50px;
+    border-top: 2px solid #000; /* Bordure supérieure transparente */
+    border-bottom: 2px solid #000; /* Bordure inférieure transparente */
+    background-color: initial; /* Couleur de fond initiale de la div */
+}
+
+.large1:hover { border-color: #FFCF1C; }
+
+
+.large2 {
+    margin: 20px 100px 0 100px;
+    padding: 50px;
+    border-bottom: 2px solid #000; /* Bordure inférieure transparente */
+    background-color: initial; /* Couleur de fond initiale de la div */
+}
+
+
+
+.large1::after {
+    content: "→"; /* Caractère de flèche */
+    display: inline-block;
+    margin-left: 10px; /* Ajustez la distance entre le texte et la flèche selon vos besoins */
+    font-size: 30px; /* Ajustez la taille de la flèche selon vos besoins */
+}
+
+.large2::after {
+    content: "→"; /* Caractère de flèche */
+    display: inline-block;
+    margin-left: 10px; /* Ajustez la distance entre le texte et la flèche selon vos besoins */
+    font-size: 30px; /* Ajustez la taille de la flèche selon vos besoins */
+}
+  
+
+.titre{
+    font-family: 'Cabin', sans-serif;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 400px 50px 400px;
+}
+
+a{
+    text-decoration: none; /* Supprime le soulignement du texte */
+    color: inherit; /* Assure que la couleur du texte reste inchangée */
+}
+
+.large1 table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.large1 th {
+    color: rgb(189, 189, 189); /* Couleur gris clair pour les titres de colonnes */
+    text-align: left;
+    font-family: 'Cabin', sans-serif;
+}
+
+.large1 th, .large1 td {
+    border: none; /* Pour supprimer les bordures des cellules du tableau */
+    padding: 10px; /* Ajoute un peu d'espace entre le texte et les bords */
+}
+
+.large2 table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.large2 th {
+    color: rgb(189, 189, 189); /* Couleur gris clair pour les titres de colonnes */
+    text-align: left;
+    font-family: 'Cabin', sans-serif;
+}
+
+.large2 th, .large2 td {
+    border: none; /* Pour supprimer les bordures des cellules du tableau */
+    padding: 10px; /* Ajoute un peu d'espace entre le texte et les bords */
+}
+
+
+/*MON CV*/
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.cv, .explanation {
+    width: 100%;
+    padding: 20px;
+    font-family: 'Cabin', sans-serif;
+}
+
+.explanation h2{
+    font-family: 'Cabin', sans-serif;
+}
+
+
+.explanation {
+    background-color: #fff; /* Couleur de fond pour la section d'explication */
+}
+
+.containercv {
+    display: flex;
+    width: 100%;
+    height: 600px; /* 100% de la hauteur de la fenêtre visible */
+}
+
+.left-sidebar {
+    flex: 1; /* 20% de l'espace */ /* Couleur de fond de la partie de gauche */
+    text-align: center;
+    align-items: center;
+}
+
+.left-sidebar .menu-item:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+.left-sidebar .menu-item {
+    cursor: pointer;
+    color: rgb(163, 159, 159);
+}
+.left-sidebar .menu-item.active {
+    color: #000; /* Couleur noire pour l'élément actif */
+}
+
+.main-content {
+    flex: 4; /* 80% de l'espace */
+    background-color: white; /* Couleur de fond de la partie principale */
+}
+
+.contentxp{
+    display: none; /* Cache tous les contenus par défaut */
+}
+
+
+/*STAGE 1*/
+
+.cont1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+.company-summary {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.experience-description {
+    margin-bottom: 60px;
+}
+
+.table-equal-width th, .table-equal-width td {
+    width: 33.33%;
+}
+
+.stage{
+    margin-bottom: 200px;
+}
+
+.video{
+    max-width: 100%;
+    height: 500px;
+}
+
+/* GRILLE CRIMSON FACTORY*/
+
+.grille {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 20px; /* Espacement entre les éléments */
+    margin: 0 100px 150px 100px;
+}
+
+.grid-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid-item p {
+    margin: 10px 0;
+}
+
+/*CONTACT*/
+
+.containercontact {
+    width: 80%;
+    max-width: 600px;
+    margin: 200px auto 600px auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #000;
+}
+.contact-form {
+    border: 1px solid #000;
+    padding: 20px;
+    border-radius: 5px;
+}
+.contact-form label {
+    font-weight: bold;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+.contact-form button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #333;
+}
+
+/* Compétences */
+
+.competences {
+    padding: 80px 10%;
+}
+
+.competences-container {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 1fr; /* milieu plus étroit */
+    gap: 40px;
+}
+
+
+.competence-card h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.competence-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.competence-card li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+

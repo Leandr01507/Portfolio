@@ -1,0 +1,145 @@
+/* Media query pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+
+    .indes {
+        font-size: 12px;
+    }
+
+
+    .header {
+        padding: 10px; /* Réduisez l'espace autour du logo et du menu */
+        width: 430px;
+        height: 50px;
+    }
+
+    .header a p {
+        margin-left: 0;
+    }
+
+    .navbar {
+        display: none; /* Masquez le menu de navigation sur les écrans plus petits */
+    }
+
+    .container {
+        margin-top: 50px;
+        height: auto; /* Ajustez la hauteur automatiquement */
+        padding: 20px; /* Ajoutez de l'espace autour du contenu */
+    }
+
+    .titre {
+        align-items: flex-start;   
+        text-align: left;
+        padding: 0 0 20px 20px;       
+        font-size: 22px;
+    }
+
+    .social-icons {
+        align-items: flex-start;   
+        text-align: center;
+        padding: 0 0 20px 0;       
+    }
+
+    .centered h1 {
+        font-size: 40px; /* Réduisez la taille du texte centré */
+        margin: 50px auto 0 auto;
+    }
+
+    .right-aligned {
+        text-align: right; /* Centrez le texte à droite */
+        margin-left: 170px; /* Ajustez la marge */
+        margin-bottom: 100px;
+        font-size: 13px;
+    }
+
+    .text {
+        padding: 0 20px; /* Réduisez les marges latérales */
+        margin-bottom: 50px; /* Réduisez l'espacement en bas */
+    }
+
+    .text h3 {
+        font-size: 24px; /* Réduisez la taille du texte h3 */
+    }
+
+    .text p {
+        font-size: 14px; /* Réduisez la taille du texte p */
+    }
+
+    .table-equal-width th {
+        font-size: 14px;
+    }
+
+    .table-equal-width td {
+        font-size: 14px;
+    }
+
+    .company-summary p{
+        font-size: 14px;
+    }
+
+    .experience-description h2 {
+        font-size: 16px;
+    }
+
+    .experience-description p {
+        font-size: 14px;
+    }
+
+    .moi {
+        margin: 0;
+    }
+
+    .moi img{
+        height: 300px;
+        width: 200px;
+    }
+
+    .mail {
+        margin : 0 0 20px 20px;
+    }
+
+    .footer {
+        font-size: 10px; /* Réduisez la taille du texte du pied de page */
+    }
+
+    .space {
+        padding: 0 20px; /* Réduisez les marges latérales pour l'espace social */
+    }
+
+    .large1, .large2 {
+        margin: 20px 20px 0 20px; /* Ajustez les marges autour des éléments "large" */
+        padding: 50px 50px 50px 20px;
+    }
+
+    .table-equal-width th, .table-equal-width td {
+        width: 100%; /* Ajustez la largeur des cellules du tableau pour qu'elles occupent tout l'espace disponible */
+    }
+
+    .cont {
+        margin-top: 100px; /* Réduisez la marge en haut pour "Mon CV" */
+    }
+
+    .cont1 {
+        margin-top: 50px; /* Réduisez la marge en haut pour "Stage 1" */
+    }
+
+    .grille {
+        display: block; /* Affichez les éléments de la grille verticalement */
+        margin: 0 20px; /* Ajustez la marge autour de la grille */
+    }
+
+    .grid-item {
+        margin-bottom: 20px; /* Ajoutez un peu d'espacement entre les éléments de la grille */
+    }
+
+    .containercontact {
+        margin: 50px auto 100px auto; /* Réduisez la marge pour "Contact" */
+        padding: 10px; /* Réduisez l'espacement du formulaire de contact */
+    }
+    
+    @media (max-width: 900px) {
+        .competences-container {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+}
